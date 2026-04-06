@@ -3,7 +3,7 @@ USE patron_mvc;
 INSERT INTO usuarios (nombre, email, password, rol, creado_en)
 VALUES (
     'Carlos',
-    'isistemas2022@gmail.com',
+    'admin2@ejemplo.com',
     '$2y$10$1bMSQpOVo.EtwWahox31QuhUf/9Hmy6fwCZfx8G9TRFDVrUpHTmba',
     'admin',
     NOW()

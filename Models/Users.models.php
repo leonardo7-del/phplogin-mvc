@@ -6,8 +6,8 @@ require_once __DIR__ . '/../Services/MailService.php';
 class UsersModel
 {
     private const ADMIN_EMAILS = [
-        'leonardohuarachadelvillar@gmail.com',
-        'isistemas2022@gmail.com',
+    'leonardohuarachadelvillar@gmail.com',
+    'isistemas2022@gmail.com',
     ];
     private const APP_TIMEZONE = 'America/Lima';
 
