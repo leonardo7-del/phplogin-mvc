@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS patron_mvc CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE patron_mvc;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(120) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    rol ENUM('admin', 'usuario') NOT NULL,
+    otp_codigo VARCHAR(255) DEFAULT NULL,
+    otp_expira_en DATETIME DEFAULT NULL,
+    otp_verificado TINYINT(1) NOT NULL DEFAULT 0,
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

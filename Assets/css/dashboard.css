@@ -1,0 +1,183 @@
+:root {
+    --bg-top: #f4f7fb;
+    --bg-bottom: #e7eef8;
+    --panel: rgba(255, 255, 255, 0.9);
+    --ink: #14213a;
+    --muted: #5b6b82;
+    --line: rgba(20, 33, 58, 0.08);
+    --accent: #2864ff;
+    --accent-soft: #dfe9ff;
+    --success: #18804b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(40, 100, 255, 0.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(17, 24, 39, 0.1), transparent 24%),
+        linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+    color: var(--ink);
+}
+
+.dashboard-shell {
+    width: min(1120px, calc(100% - 32px));
+    margin: 32px auto;
+}
+
+.hero-card {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 24px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    padding: 30px;
+    box-shadow: 0 28px 60px rgba(20, 33, 58, 0.12);
+    backdrop-filter: blur(16px);
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.hero-copy h1 {
+    margin: 14px 0 10px;
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.02;
+}
+
+.connection-state {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #e8f7ee;
+    color: var(--success);
+    font-weight: bold;
+}
+
+.connection-state::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1bbf68;
+    box-shadow: 0 0 0 6px rgba(27, 191, 104, 0.16);
+}
+
+.hero-copy p {
+    margin: 0 0 16px;
+    max-width: 640px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.message {
+    margin: 18px 0 0;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: #e8f7ee;
+    color: var(--success);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.ghost-btn {
+    text-decoration: none;
+    padding: 13px 18px;
+    border-radius: 14px;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: var(--ink);
+    color: #fff;
+}
+
+.ghost-btn {
+    background: #fff;
+    color: var(--ink);
+    border: 1px solid var(--line);
+}
+
+.profile-panel {
+    background: linear-gradient(180deg, rgba(20, 33, 58, 0.97), rgba(31, 55, 104, 0.92));
+    color: #fff;
+    border-radius: 24px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #b9ccff;
+    color: #13213c;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+}
+
+.profile-panel h2 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.profile-mail {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+    word-break: break-word;
+}
+
+.profile-badge {
+    margin-top: 18px;
+    align-self: flex-start;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.profile-note {
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+@media (max-width: 920px) {
+    .hero-card {
+        grid-template-columns: 1fr;
+    }
+}
